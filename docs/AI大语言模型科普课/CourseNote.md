@@ -18,7 +18,7 @@
   - 人工智能，让计算机系统模拟人类的智能，从而解决问题完成任务。
 - ML:
   - Machine Learning.
-  - 机器学习，是AI的一个子集。
+  - 机器学习，是AI的一个子集。a branch of artificial intelligence (AI) and computer science which focuses on the use of data and algorithms to imitate the way that humans learn, gradually improving its accuracy.
   - 核心：不需要人类显示编程。只需要通过算法让计算机自行学习和改进，去识别模式，做出预测和决策。
   - 分支：监督学习，无监督学习，强化学习。
     - Supervised Learning: 监督学习
@@ -34,7 +34,7 @@
     - Reinforced Learning: 强化学习
       - 让模型在环境中采取行动，获得结果反馈。在反馈中学习。在给定情况下采取最佳行动，最大化奖励，最消化损失。
   - Deep Learning: 深度学习
-    - 不输入监督学习、非监督学习、强化学习的任一类型。是机器学习的一种方法，使用人工神经网络模仿人脑处理信息的方式，通过层次化方法提取和表示数据特征。
+    - 不属于监督学习、非监督学习、强化学习的任一类型。是机器学习的一种方法，使用人工神经网络模仿人脑处理信息的方式，通过层次化方法提取和表示数据特征。a subset of machine learning that uses multi-layered neural networks, called deep neural networks, to simulate the complex decision-making power of the human brain. 
     - Generative AI 是深度学习的一种应用。利用神经网络来识别现有内容的模式和结构，学习新的内容。
 - LLM: Large Language Model, 大语言模型。
   - 是深度学习的一种应用，专门用于处理自然语言任务。
