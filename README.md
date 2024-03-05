@@ -14,8 +14,14 @@ Learn AI
 - Duration:     1 Hour
 - Date:         1st, March, 2024
 
-### Microsoft Azure AI Fundamentals: Get started with artificial 
+### Microsoft Fundamentals AI Concepts
 - Level:        Beginner
 - Status:       Completed
 - Duration:     2 Hours
 - Data:         2nd, March, 2024
+
+### Microsoft Fundamentals of machine learning
+- Level:        Beginner
+- Status:       In Progress
+- Duration:     3 Hours
+- Date:         4th, March 2024

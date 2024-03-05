@@ -1,6 +1,6 @@
-# Microsoft Azure AI Fundamentals: Get started with artificial intelligence
+# Fundamental AI Concepts
 ### Level: Beginner
-### Link: [Microsoft Learn](https://learn.microsoft.com/en-us/training/paths/get-started-with-artificial-intelligence-on-azure/)
+### Link: [Microsoft Learn](https://learn.microsoft.com/en-us/training/modules/get-started-ai-fundamentals/)
 ### Duration: 1.5 Hours
 
 ---
@@ -18,7 +18,7 @@
 
 ### Machine Learning
 - Machine Learning is the foundation for most AI solutions.
-- Machine Learning based Data. Machine Learning model try to find the relationship between data.
+- Machine Learning based on the Data. Machine Learning model try to find the relationship between data.
 - Machine Learning in Microsoft Azure
   - Automated machine learning: this feature enables non-experts to quickly create an effective machine learning model from data.
   - Azure Machine Learning designer: a graphical interface enabling no-code development of machine learning solutions.
