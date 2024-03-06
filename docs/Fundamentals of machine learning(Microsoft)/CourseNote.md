@@ -29,6 +29,7 @@
 
 - Supervised machine learning 监督学习
   - A general term for machine leaning algorithms in which the training data include both feature values and known label values. 学习数据包括特征值和已知标签值的机器学习算法一类。
+  - Training a supervised machine learning model involves multiple iterations in which you use an appropriate algorithm to train a model, evaluate the model's predictive performance, and refine the model by repeating the training process with different algorithms and parameters until you achieve an acceptable level of predictive accuracy. 监督学习训练模型涉及多次迭代，使用不用的算法来训练，然后评估预测效果，再重复训练直到模型的预测准确度达到预期。
   - Types of Supervised ML
     - Regression. 回归
       - A form of supervised ML in which the label predicted by the model is numeric value. 模型预测的标签是一个数值。
@@ -40,6 +41,12 @@
           - Predict one of two mutually exclusive outcomes. 预测两个互斥的结果。
         - Multiclass classification 多元分类
           - Extends binary classification to predict a label that represents one of multiple possible classes. 扩展了二元分类以预测表示多个互斥可能类别的标签。
+  - 4 Key Elements of the training process of supervised ML model:
+    - Split the training data (randomly) to create a dataset with which to train the model while holding back a subset of the data that you'll use to validate the trained model. 把数据随机分为两部分。 一部分用于训练模型，一部分用于验证模型。
+    - Use an algorithm to fit the training data to a model. 使用算法将训练数据拟合成模型。
+    - Use the validation data you held back to test the model by predicting labels for the features. 使用验证数据来测试模型预测。
+    - Compare the known actual labels in the validation dataset to the labels that the model predicted. Then aggregate the differences between the predicted and actual label values to calculate a metric that indicates how accurately the model predicted for the validation data. 比较验证数据集中的实际标签和预测结果。汇总差异，以得到验证预测准确性的指标值。
+    - After each train, validate, and evaluate iteration, you can repeat the process with different algorithms and parameters until an acceptable evaluation metric is achieved. 不断重复，直到指标值达到预期。
 
 - Unsupervised machine learning 无监督学习
   - Involves training models using data that consists only of feature values without any known labels. 训练数据仅包含特征值，不包含已知标签值。
@@ -47,3 +54,34 @@
   - Types of Unsupervised ML
     - Clustering 聚类
       - Identifies similarities between observations based on their features, and groups them into discrete clusters. 根据被观察项目的特征识别出观察值的关系，并将其放到离散的簇分组中。
+
+### Regression 回归
+- Regression models are trained to predict numeric label values based on training data that includes both features and known labels. 回归模型用于预测数字标签值， 其训练数据包括特征和已知结果标签。
+- Step of Training
+  - Training a regression model
+    - Split the data and use a subset of it to train the model. 拆分数据集。
+    - Plot data as coordinates along two axes to get an insight of how these x and y values might relate to one another. 将数据放到XY坐标轴中。
+    - Apply an algorithm to the training data and fit it to a function that applies an operation to x to calculate y. 应用算法来拟合模型。
+  - Evaluating a regression model
+    - Use the model to predict the label for each of the observations in rest dataset based on the feature (x) value. 用剩余数据来生成结果。
+    - Compare the predicted label (ŷ) to the known actual label value (y). 比较预期结果与生成结果。
+  - Regression evaluation metrics 评估指标
+    - Mean Absolute Error (MAE) 平均绝对误差
+      - Calculate the absolute error for each prediction. 计算每个预测与实际值之间的绝对差值。
+      - Summarized for the whole validation set as the mean absolute error (MAE). 将所有绝对差求平均值。
+    - Mean Squared Error (MSE) 均方误差
+      - Produce a metric that "amplifies" larger errors by squaring the individual errors and calculating the mean of the squared values. 将绝对值差求平方，再将平方值求平均，得到均方误差。放大差值，以求获得单个差值小的模型，而不是错误数量少的模型。
+    - Root Mean Squared Error (RMSE) 均方根误差。
+      - Calculate the square root of the MSE to measure the error in terms of the number. 对均方误差求根。回归到对错误数量的评估。
+    - Coefficient of determination (R2)
+      - The coefficient of determination (more commonly referred to as R2 or R-Squared) is a metric that measures the proportion of variance in the validation results that can be explained by the model, as opposed to some anomalous aspect of the validation data. 验证可以用模型解释的差异，而不是数据方面的差异。
+      - Compares the sum of squared differences between predicted and actual labels with the sum of squared differences between the actual label values and the mean of actual label values, like this: R2 = 1- ∑(y-ŷ)^2 ÷ ∑(y-ȳ)^2 将训练后模型的预测与对应实际值的之间的平方差与优化后模型的预测值与对应实际值之间的额平方差进行比较
+  - Iterative training 迭代训练
+    - Adjust:
+      - Feature selection and preparation (choosing which features to include in the model, and calculations applied to them to help ensure a better fit). 调整特征，改进拟合。
+      - Algorithm selection. 调整算法。
+      - Algorithm parameters (numeric settings to control algorithm behavior, more accurately called hyperparameters to differentiate them from the x and y parameters). 调整参数。
+
+
+### Binary classification
+- 
