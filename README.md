@@ -22,6 +22,12 @@ Learn AI
 
 ### Microsoft Fundamentals of machine learning
 - Level:        Beginner
-- Status:       In Progress
-- Duration:     3 Hours
+- Status:       Completed
+- Duration:     5 Hours
 - Date:         4th, March 2024
+
+### Microsoft Fundamentals of Azure AI services
+- Level:        Beginner
+- Status:       Completed
+- Duration:     1 Hours
+- Date:         7th, March 2024

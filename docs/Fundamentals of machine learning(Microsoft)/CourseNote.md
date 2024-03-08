@@ -1,7 +1,7 @@
 # Fundamentals of Machine Learning
 ### Level: Beginner
 ### Link: [Microsoft Learn](https://learn.microsoft.com/en-us/training/modules/fundamentals-machine-learning/)
-### Duration: 3 Hours
+### Duration: 5 Hours
 ---
 
 ## Course Note
