@@ -31,3 +31,27 @@ Learn AI
 - Status:       Completed
 - Duration:     1 Hours
 - Date:         7th, March 2024
+
+### Microsoft Fundamental of Computer Vision
+- Level:        Beginner
+- Status:       Completed
+- Duration:     2 Hours
+- Date:         8th, March 2024
+
+### Microsoft Fundamental of Facial Recognition
+- Level:        Beginner
+- Status:       Completed
+- Duration:     1 Hours
+- Date:         8th, March 2024
+
+### Microsoft Fundamental of optical character recognition
+- Level:        Beginner
+- Status:       Completed
+- Duration:     1 Hours
+- Date:         8th, March 2024
+
+### Microsoft Fundamentals of Text Analysis with the Language Service
+- Level:        Beginner
+- Status:       In progress
+- Duration:     2 Hours
+- Date:         9th, March 2024
