@@ -52,6 +52,24 @@ Learn AI
 
 ### Microsoft Fundamentals of Text Analysis with the Language Service
 - Level:        Beginner
-- Status:       In progress
+- Status:       Completed
 - Duration:     2 Hours
 - Date:         9th, March 2024
+
+### Microsoft Fundamentals of conversational language understanding
+- Level:        Beginner
+- Status:       Completed
+- Duration:     2 Hours
+- Date:         9th, March 2024
+
+### Microsoft question answering with the Language Service
+- Level:        Beginner
+- Status:       Completed
+- Duration:     2 Hours
+- Date:         10th, March 2024
+
+### Microsoft Fundamentals of Azure AI Speech
+- Level:        Beginner
+- Status:       In progress
+- Duration:     2 Hours
+- Date:         10th, March 2024

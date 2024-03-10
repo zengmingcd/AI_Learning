@@ -5,7 +5,7 @@
 ---
 
 ## Course Note
-- Face detection involves identifying regions of an image that contain a human face, typically by returning bounding box coordinates that form a rectangle around the face. 人脸识别是识别存在人脸的图形中人脸的区域，一般返回人脸位置，用框框出。
+- Face detection involves identifying regions of an image that contain a human face, typically by returning bounding box coordinates that form a rectangle around the face. 人脸检测是识别存在人脸的图形中人脸的区域，一般返回人脸位置，用框框出。
 - facial recognition uses multiple images of an individual to train the model. 面部识别是根据人脸特征识别确定的人，一般是用一个人的多张图片来训练。
 
 ### Azure sources in Azure AI
