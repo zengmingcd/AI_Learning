@@ -82,8 +82,13 @@ Learn AI
 
 ### Microsoft Fundamentals of Knowledge Mining and Azure AI Search
 - Level:        Beginner
-- Status:       In progress
+- Status:       Completed
 - Duration:     4 Hours
 - Date:         11th, March 2024
 
+### Microsoft Fundamentals of Generative AI
+- Level:        Beginner
+- Status:       In progress
+- Duration:     2 Hours
+- Date:         11th, March 2024
 
