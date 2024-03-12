@@ -70,6 +70,20 @@ Learn AI
 
 ### Microsoft Fundamentals of Azure AI Speech
 - Level:        Beginner
-- Status:       In progress
+- Status:       Completed
 - Duration:     2 Hours
 - Date:         10th, March 2024
+
+### Microsoft Fundamentals of Azure AI Document Intelligence
+- Level:        Beginner
+- Status:       Completed
+- Duration:     2 Hours
+- Date:         10th, March 2024
+
+### Microsoft Fundamentals of Knowledge Mining and Azure AI Search
+- Level:        Beginner
+- Status:       In progress
+- Duration:     4 Hours
+- Date:         11th, March 2024
+
+
