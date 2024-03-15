@@ -88,7 +88,12 @@ Learn AI
 
 ### Microsoft Fundamentals of Generative AI
 - Level:        Beginner
-- Status:       In progress
+- Status:       Completed
 - Duration:     2 Hours
-- Date:         11th, March 2024
+- Date:         14th, March 2024
 
+### Fundamentals of Azure OpenAI Service
+- Level:        Beginner
+- Status:       In progress
+- Duration:     24 Hours
+- Date:         15th, March 2024
