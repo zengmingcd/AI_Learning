@@ -94,6 +94,12 @@ Learn AI
 
 ### Fundamentals of Azure OpenAI Service
 - Level:        Beginner
-- Status:       In progress
-- Duration:     24 Hours
+- Status:       Completed
+- Duration:     4 Hours
+- Date:         15th, March 2024
+
+### Fundamentals of Responsible Generative AI
+- Level:        Beginner
+- Status:       Completed
+- Duration:     2 Hours
 - Date:         15th, March 2024
