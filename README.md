@@ -103,3 +103,9 @@ Learn AI
 - Status:       Completed
 - Duration:     2 Hours
 - Date:         15th, March 2024
+
+### Azure AI Fundamentals Certification 2024 (AI-900) - Full Course to PASS the Exam
+- Level:        Beginner
+- Status:       In progress
+- Duration:     15 Hours
+- Date:         21th, March 2024
