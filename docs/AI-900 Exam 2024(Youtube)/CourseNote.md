@@ -283,4 +283,189 @@
     - FP + TP = Total Positive (tP) 预测为Yes的总数
     - tF + tT = tN + tP = Total 总数
 
-### 
+### Anomaly Detection AI
+- What is an anomaly?
+  - An abnormal thing.
+  - A marked deviation(明显偏差) from the norm(规范) or a standard(标准).
+- What is anomaly detection?
+  - Anomaly Detection is the process of finding outliers(异常值) within a dataset called an anomaly. 异常检测是在称为异常的数据集中查找异常值的过程。
+  - Detecting when a piece of(一段) data or access patterns(访问模式) appear suspicious(可疑) or malicious(恶意). 检测一段数据或访问模式何时出现可疑或者恶意。
+- Use cases for anomaly detection
+  - Data cleaning
+  - Intrusion detection (入侵检测)
+  - Fraud detection (欺诈检测)
+  - Systems health monitoring (系统健康监控)
+  - Event detection in sensor networks (传感器网络中的事件检测)
+  - Ecosystem disturbances (生态系统干扰)
+  - Detection of critical and cascading flaws (检测关键缺陷和级联缺陷)
+- Why do we need anomaly detection
+  - Anomaly detection by hand is a very tedious process.
+  - Using machine learning for anomaly detection is more efficient and accurate.
+- Anomaly detector: Detect anomalies in data to quickly identify and troubleshoot issues.
+
+### Computer Vision
+- What is computer vision?
+  - Computer Vision is when we use Machine Learning Neural Networks to gain high-level understanding from digital images or video.
+- Computer Vision Deep Learning Algorithms:
+  - Convolutional neural network (CNN)(卷积神经网络) - Image and Video recognition. 
+    - Inspired after how human eyes actually process information and send it back to brain to be processed.
+  - Recurrent neural network (RNN)(循环神经网络) - Handwriting recognition or speech recognition.
+- Types of Computer Vision
+  - Image Classification - look at an image or video and classify (place it in a category)
+  - Object Detection - identify objects within an image or video and apply labels and location boundaries.
+  - Semantic Segmentation(语义分割) - identify segments or objects by drawing pixel mask (great for objects in movement) 通过绘制像素蒙版来识别片段或对象(非常适合运动中的对象)
+  - Image Analysis -  analyze an image or video to apply descriptive and context labels.
+    - eg. An employee sitting at a desk in Tokyo
+  - Optical Character Recognition (OCR) - find text in images or videos and extract them into digital text for editing.
+  - Facial Detection - detect faces in a photo or video, draw a location boundary, label their expression(表情).
+- Computer Vision by Microsoft for iOS
+  - Seeing AI is an AI app developed by Microsoft for iOS
+    - Seeing AI uses the device camera to identify people and objects, and then the app audibly(有声地) describes those objects for people with visual impairment(视力障碍).
+- Azure's Computer Vision Service Offering
+  - Computer Vision - analyze images and video, and extract descriptions, tags, objects, and text.
+  - Custom Vision - custom image classification and object detection models using your own images
+  - Face - detect and identify people and emotions in images.
+  - Form Recognizer - translate scanned documents into key/value or tabular(表格的) editable data.
+  
+### Natural Language Processing (NLP)
+- What is NLP?
+  - Natural Language Processing is Machine Learning that can understand the context of a corpus(语料库) (a body of related text).
+- NLP enables you to:
+  - Analyze and interpret(解释) text within documents, email messages
+  - Interpret or contextualize(情景化) spoken token.
+    - eg. sentiment analysis
+  - Synthesize(合成) speech.
+    - eg. a voice assistance talking to you.
+  - Automatically translate spoken or written phrases and sentences between language.
+  - Interpret spoken or written commands and determine appropriate(适当的) actions.
+- What is Cortana?
+  - Cortana is a virtual assistant developed by Microsoft which uses the Bing search engine to perform tasks such as setting reminders and answering questions for the user.
+- Azure's NLP Service offering:
+  - Text Analytics
+    - Sentiment analysis to find out what customers think.
+    - Find topic-relevant phrases using key phrase extraction. (使用关键短语提取查找主题相关的短语)
+    - Identify the language of the text with language detection.
+    - Detect and categorize entities in your text with named entity recognition.
+  - Translator
+    - Real-time text translation.
+    - multi-language support.
+  - Speech
+    - Transcribe(转录) audible(可听的) speech into readable, searchable text.
+  - Language Understanding (LUIS)
+    - Natural language processing service that enables you to understand human language in your own application, website, chatbot, IoT device, and more.
+  
+### Conversational AI
+- What is Conversational AI
+  - Conversational AI is technology that can participate in conversations with humans.
+    - Chatbots
+    - Voice Assistants
+    - Interactive(交互的) Voice Recognition Systems (IVRS 交互式语音识别系统)
+- Use Cases
+  - Online Customer Support
+    - Replaces human agents for replying about customer FAQs, shipping
+  - Accessibility
+    - Voice operated UI for those who are visually impaired. 为视力障碍人士提供语音操作的用户界面。
+  - HR processes
+    - Employee training, onboarding, updating employee information.
+  - Health Care
+    - Accessible and affordable health care. 可获得且负担得起的医疗保健。
+    - eg. claim processes
+  - Internet of Things(IoT)
+    - Amazon Alexa, Apple Siri, Google Home.
+  - Computer Software
+    - Autocomplete search on phone or desktop
+- Azure's Conversational AI service offering:
+  - QnA Maker
+    - Create a conversational question-and-answer bot from your existing content(Knowledge base).
+  - Azure Bot Service
+    - Intelligent, serverless bot service that scales(扩展) on demand.
+    - Used for creating, publishing, and managing bots.
+
+### Responsible AI
+- What is Responsible AI
+  - Responsible AI focuses on ethical(道德的), transparent(透明的) and accountable(负责的) use of AI technologies.
+- Microsoft puts into practice Responsible AI via its six Microsoft AI principles
+  - Fairness - AI systems should treat all people fairly.
+  - Reliability and Safety - AI systems should perform reliably and safely.
+  - Privacy and Security - AI systems should be secure and respect privacy.
+  - Inclusiveness(包容性) - AI systems should empower everyone and engage(吸引) people.
+  - Transparency - AI systems should be understandable.
+  - Accountability - People should be accountable for AI systems.
+
+### Fairness
+- What is Fairness?
+  - AI systems should treat all people fairly.
+  - AI systems can reinforce(加强) existing societal(社会的) stereotypical(刻板印象).
+  - Bias can be introduced(引入) during the development of a pipeline.
+- AI systems that are used to allocate(分配) or withhold(扣留):
+  - Opportunities
+  - Resources
+  - Information
+- In domains:
+  - Criminal Justice
+  - Employment and Hiring
+  - Finance and Credit
+- eg. A machine learning model is designed to select final applicants(申请人) for a hiring pipeline without incorporating(加入) any bias based on gender, ethnicity(种族) or may result in an unfair advantage(优势).
+- Azure ML can tell you how each feature can influence(影响) a model's prediction for bias.
+- Fairlearn is an open-source python project to help data scientist to improve fairness in their AI systems.
+
+### Reliability and Safety
+- What is reliability and safety
+  - AI systems should perform reliably and safely.
+  - AI software must be rigorous(严格的) tested to ensure they work as expected before release to the end user.
+  - If there are scenarios where AI is making mistakes its important to release a report quantified(量化的) risks and harms to end-users so they are informed of the short-comings(缺点) of an AI solution.
+- AI where concern for reliability and safety for humans is critically important:
+  - Autonomous Vehicle
+  - AI health diagnosis, AI suggesting prescriptions.
+  - Autonomous Weapon Systems.
+
+### Privacy and Security
+- What is privacy and security
+  - AI systems should be secure and respect privacy.
+  - AI can require vasts amounts of data to train deep learning models.
+  - The nature of the ML model(机器学习的性质) may require Personally Identifiable Information (PII)
+  - It is important that we ensure protection of user data that it is not leaked(泄露) or disclosed(披露).
+- In some cases ML models can be run locally on a user's device so their PII remains on their device avoiding that vulnerability(漏洞).
+- AI Security Principles to detect malicious(恶意的) actors:
+  - Data Origin and Lineage 数据起源与延续
+  - Data Use Internal vs External 内部数据使用与外部数据使用
+  - Data Corruption Considerations 数据损坏注意事项
+  - Anomaly detection 异常检测
+
+### Inclusiveness
+- What is Inclusiveness
+  - AI systems should empower everyone and engage people.
+  - If we can design AI solutions for the minority(少数) of users. Then we can design AI solutions for the majority（广大） of users.
+    - Minority:
+      - Physical ability
+      - Gender
+      - Sexual orientation
+      - Ethnicity
+      - Other factors
+
+### Transparency
+- What is Transparency
+  - AI systems should be understandable.
+  - Interpretability(可解释性) / Intelligibility(可理解性) is when end-users can understand the behavior of the AI. 可解释性/可理解性是指最终用户可以理解AI的行为。
+- Transparency of AI systems can result in:
+  - Mitigating(缓解) unfairness
+  - Help developers debug their AI systems
+  - Gaining(取得) more trust from our users
+- Those build AI systems should be:
+  - Open about the why they are using AI.
+  - Open about the limitations of their AI systems.
+- Adopting(采用) an open-source AI framework can provide transparency (at least from a technical perceptive(技术角度)) on the internal workings of an AI system. 采用开源人工智能框架可以提供人工智能系统内部运作的透明度。
+  
+### Accountability
+- What is accountability
+  - People should be accountable for AI systems.
+  - The structure put in place to consistently(始终如一地) enacting(制定) AI principles and taking them into account.
+- AI systems should work within:
+  - Framework of governance
+  - Organization principles
+- Ethical and legal standards that are clearly defined.
+- Principles guide Microsoft on how they Develop, Sell and Advocate(提倡) when working with third-parties and this can push towards regulations towards AI Principles.
+
+### AI Interaction (互动)
+- Microsoft has a free web-app that goes through practical scenarios to teach Microsoft AI Principles: [Link](https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/)
+- 
