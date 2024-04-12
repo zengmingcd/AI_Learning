@@ -468,4 +468,156 @@
 
 ### AI Interaction (互动)
 - Microsoft has a free web-app that goes through practical scenarios to teach Microsoft AI Principles: [Link](https://www.microsoft.com/en-us/haxtoolkit/ai-guidelines/)
-- 
+
+
+### Azure Cognitive Services
+- What is Azure Cognitive Services?
+  - Azure Cognitive Services is a comprehensive(综合) family of AI services and cognitive APIs to help you build intelligent apps.
+    - Create customizable, pre-trained models built with "breakthrough" AI Search.
+    - Deploy Cognitive Services anywhere from the cloud to the edge with containers.
+    - Get started quickly - no machine-learning expertise required.
+    - Developed with strict ethical standards, empowering responsible use with industry-leading tools and guidelines.
+- Types of services:
+  - Decision(决策):
+    - Anomaly Detector(异常检测器) - Identify potential problems early on.
+    - Content Moderator(内容审核) - Detect potentially offensive(攻击性) or unwanted content.
+    - Personaliser(个性化定制) - Create rich, personalized experiences for every user.
+  - Language:
+    - Language Understanding - Build natural language understanding into apps, bots and IoT devices.
+    - QnA Maker - Create a conversational question and answer layer over your data.
+    - Text Analytics - Detect sentiment, key phrases and named entities.
+    - Translator - Detect and translate more than 90 supported languages.
+  - Speech:
+    - Speech to Text - Transcribe audible speech into readable, searchable text.
+    - Text to Speech - Convert text to lifelike speech translation into your apps.
+    - Speech Translation - Integrate real-time speech translation into your apps.
+    - Speaker Recognition - Identify and verity the people speaking based on audio.
+  - Vision:
+    - Computer Vision - Analyze content in images and video.
+    - Custom Vision - Customize image recognition to fit your business needs.
+    - Face - Detect identify people and emotions in images.
+  
+- What is API Key and API Endpoint
+  - Cognitive Services is an umbrella AI service that enables customers to access multiple AI services with an API key and an API Endpoint.
+
+### Knowledge Mining:
+- What is Knowledge Mining:
+  - Knowledge Mining is a discipline(学科) in AI that uses a combination of intelligent services to quickly learn from vast(大量的) amounts of information.
+  - It allows organizations to deeply understand and easily explore information, uncover(发现) hidden insights(见解), and find relationships and patterns at scale.
+  - 3 Steps:
+    - Ingest(提取): content from a range of sources, using connectors to first and third-party data stores.
+      - Structured Data:
+        - Database
+        - CSV
+      - Unstructured Data:
+        - PDF
+        - Video
+        - Image
+        - Audio
+    - Enrich(浓缩): the content with AI capabilities that let you extract information, find patterns, and deepen understanding.
+      - Cognitive Services
+        - Vision
+        - Language
+        - Speech
+        - Decision
+        - Search
+    - Explore: The newly indexed data via search, bots, existing business applications, and data visualization.
+      - Enrich, Structured Data
+        - Customer relationship management (CRM)
+        - RAP System
+        - Power BI
+  
+  ![Knowledge Mining](<Knowledge Mining.png>)
+
+- Content Research
+  ![Content Research](<Content Research.png>)
+
+- Auditing, risk, compliance management
+  ![Auditing,risk,compliance management](<Auditing, risk, compliance management.png>)
+
+- Business process management
+  ![Business process management](<business process management.png>) 
+
+- Customer support and feedback analysis
+  ![Customer support and feedback analysis](<Customer support and feedback analysis.png>)
+
+- Digital asset management
+  ![Digital asset management](<Digital asset management.png>)
+
+- Contract management
+  ![Contract management](<Contract management.png>)
+
+
+### Face Service
+- What is Face Service in Azure AI
+  - Azure Face Service provides AI algorithms that detect, recognize, and analyze human faces in images.
+  - Azure Face can detect:
+    - face in an image. 
+      - Face ID: unique identifier string for each detected face in an image.
+    - face with specific attributes(属性).
+      - Accessories. (Wearing accessories)
+      - Age
+      - Blur(模糊)(Blurriness of the face in the image)
+      - Emotion
+      - Exposure(接触)
+      - Facial hair(胡子)
+      - Gender(性别)
+      - Glasses(眼镜)
+      - Hair (头发)
+      - Head pose (头部姿势)
+      - Makeup (妆容)
+      - Mask.(are they wearing a mask?)
+      - Noise. The visual noise detected in the face image.
+      - Occlusion(遮挡).(objects blocking parts of the face)
+      - smile (笑容)
+    - face landmarks(地标): 
+      - easy-to-find points on a face 27 predefined landmark points.
+    - similar face.
+    - the same face as a specific identity across a gallery of images.
+
+### Speech and Translate Service
+- Azure's Translate service is a translation service.
+  - It can translate 90 languages and dialects. Including Klingon
+  - It uses Neural Machine Translation(NMT) replacing its legacy Statistical Machine Translation(SMT)
+  - Custom Translator allows you to extend the service for translation based on your business and domain use case.
+- Azure Speech service can speech synthesis(合成) service speech-to-text, text-to-speech, and speech-translation
+  - Speech-to-Text
+    - Real-time Speech-to-Text
+    - Batch Speech-to-Text
+    - Multi-device Conversation
+    - Conversation Transcription
+    - Create Custom Speech Models
+  - Text-to-Speech
+    - using Speech Synthesis Markup Language(SSML)
+    - Create Custom Voices
+  - Voice Assistance
+    - Integrates with Bot Framework SDK
+  - Speech Recognition
+    - Speaker verification and identification.
+
+### Text Analytics
+- Text Analytics API is a Natural Language Processing (NLP) service for text mining and text analysis.
+  - Text analytics can perform:
+    - Sentiment analysis
+      - find out what people think of your brand or topic
+        - feature provides sentiment labels(such as "negative", "neutral", and "positive")
+    - Opinion mining
+      - aspect-based sentiment analysis
+      - granular information about the opinions related to aspects
+    - Key phrase extraction
+      - quickly identify the main concepts in text.
+    - Language detection
+      - detect the language an input text is written in.
+    - Named entity recognition(NER)
+      - Identify and Categorize entities in your text as people, places, organizations, quantities,
+      - Subset of NER is Personally Identifiable Information(PII)
+- Key Phrase Extraction quickly identify the main concepts in text
+  - Key phrase extraction works best when you give it bigger amounts of text to work on
+  - This is opposite from sentiment analysis, which performs better on smaller amounts of text.
+  - Document size must be 5120 or fewer characters per document, and you can have up to 1000 items(IDs) per collection.
+- Named Entity Recognition detects words and phrases mentioned in unstructured text that can be associated with one or more semantic types.
+  - Semantic types could be: Location, Event, Person, Diagnosis, Age.
+- Sentiment analysis will apply labels and confidence score to text at the sentence and document level.
+  - Labels include negative, positive, mixed or neutral.
+  - Confidence scores ranging from 0 to 1.
+- Opinion mining with provide more granular data with a Subject and Opinion tied to a Sentient.
