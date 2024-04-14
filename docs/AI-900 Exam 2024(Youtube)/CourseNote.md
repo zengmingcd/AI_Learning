@@ -621,3 +621,174 @@
   - Labels include negative, positive, mixed or neutral.
   - Confidence scores ranging from 0 to 1.
 - Opinion mining with provide more granular data with a Subject and Opinion tied to a Sentient.
+
+### OCR Optical Character Recognition
+- Optical Character Recognition(OCR) is the process of extracting printed or handwritten text into a digital and editable format.
+  - photos of street signs
+  - products
+  - documents
+  - invoices
+  - bills
+  - Financial reports
+  - Articles
+- OCR API
+  - older recognition model
+  - supports only images
+  - executes synchronously(同步的)
+    - returning immediately with the detected text
+    - suited for less text
+  - support more languages
+  - easier to implement
+- Read API
+  - updated recognition model
+  - supports images and PDFs
+  - Executes asynchronously
+    - parallelizes tasks per line for faster results
+    - suited for lost of text
+  - Supports fewer languages
+  - A bit more difficult to implement
+- OCR is performed via the Computer Vision SDK
+
+### Form Recognizer
+- Azure Form Recognizer is a specialized OCR service (translates printed text into digital and editable content) and preserves that structure and relationship of form-like data.
+- Form Recognizer to automate data entry in your applications and enrich your documents search capabilities
+- Form Recognizer can identify:
+  - Key-value Pairs
+  - Selection Marks
+  - Table Structures
+
+- Form Recognizer outputs structures such as:
+  - Original file relationships
+  - Bounding boxes
+  - Confidence scores
+
+- Form Recognizer is composed(组成) of 
+  - Custom document processing models
+  - Prebuilt models for invoices, receipts, IDs, business cards
+  - The layout model
+
+#### Form recognizer service - custom models
+- Custom models allows you to extract text, key/value pairs, selection marks, and table data from forms
+  - These models are trained with your own data, so they're tailored(量身定制) to your forms.
+  - you only need five sample input forms to start.
+  - A trained document processing model can output structured data that includes the relationships in the original form document.
+  - After you train the model, you can test and retrain it and eventually use it to reliably extract data from more forms according to your needs.
+- 2 Learning Options
+  - Train without labels
+    - use unsupervised learning to understand the layout and relationships between fields and entries in your forms.
+  - Train with labels
+    - used supervised learning to extract value of interest, using the labeled forms you provide(trained data)
+
+#### Form recognizer service - Prebuilt Models
+- Receipts
+  - Sales receipts from Australia, Canada, Great Britain, India, and the United States
+  - Fields Extracted
+    - Receipt Type
+    - Merchant Name
+    - Merchant Phone Number
+    - Merchant Address
+    - Transaction Date
+    - Transaction Time
+    - Total
+    - Subtotal
+    - Tax
+    - Tip
+    - Items
+    - Name
+    - Quantity
+    - Price
+    - Total Price
+- Business Card
+  - English business card
+  - Fields Extracted
+    - Contact Names
+    - First Name
+    - Last Name
+    - Company Names
+    - Departments
+    - Job Titles
+    - Emails
+    - Websites
+    - Addresses
+    - Mobile Phones
+    - Faxes
+    - Work Phones
+    - Other Phones
+- Invoices
+  - Extracts data from invoices in various formats and returns structured data
+  - Extracted Fields
+    - Customer Name
+    - Customer ID
+    - Purchase Order
+    - Invoice ID
+    - Invoice Date
+    - Due Date
+    - Vendor Name
+    - Vendor Address
+    - Vendor Address Recipient
+    - Customer Address
+    - Customer Address Recipient
+    - Billing Address
+    - Billing Address Recipient
+    - Shipping Address
+    - Shipping Address Recipient
+    - Sub Total
+    - Total Tax
+    - Invoice Total
+    - Amount Due
+    - Service Address
+    - Service Address Recipient
+    - Remittance Address
+    - Remittance Address Recipient
+    - Service Start Date
+    - Service End Date
+    - Previous Unpaid Balance
+  - Extracted Line Item Data
+    - Items
+    - Amount
+    - Description
+    - Quantity
+    - Unit Price
+    - Product Code
+    - Unit
+    - Date
+    - Tax
+- Identity Documents (IDs)
+  - World-wide passports and US driver licenses
+  - Extracted Fields
+    - Country Region
+    - Date of Birth
+    - Date of Expiration
+    - Document Number
+    - First Name
+    - Last Name
+    - Nationality
+    - Sex
+    - Machine Readable Zone
+    - Document Type
+    - Address
+    - Region
+
+### Language Understanding Service (LUIS)
+- Language Understanding (LUIS) is a no-code ML service to build natural language into apps, bots and IoT devices.
+- Quickly create enterprise-ready, custom models that continuously improve.
+- LUIS is accessed via its own isolated domain at luis.ai
+- LUIS utilizes Natural Language Processing(NLP) and Natural Language Understanding(NLU)
+- NLU is the ability to transform a linguistic statement(语言陈诉) into a representation(表达) that enables you to understand your users naturally.
+- LUIS is intended to focus on intention and extraction.
+  - What the user wants
+  - What they are talking about
+- A LUIS application is composed of a schema
+- This schema is autogenerated for you when you use the LUIS.ai web interface
+- The schema defines:
+  - Intentions - What the user is asking for.
+    - a LUIS app always contains a None Intent.
+  - Entities - What parts of the intent is used to determine the answer.
+  - Utterance(言语) - Examples of user input that includes intent and entities to train the ML model to match predictions(预测) against real user input.
+    - An intent requires one or more example utterance for training
+      - It is recommended to have 15-30 example utterances
+    - To explicitly train to ignore an utterance used the None Intent
+  - Intents classify user utterances
+  - Entities extract data from utterance
+
+### QnA Maker Service - Chat Box
