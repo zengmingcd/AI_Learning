@@ -791,4 +791,63 @@
   - Intents classify user utterances
   - Entities extract data from utterance
 
-### QnA Maker Service - Chat Box
+### Azure Machine Learning Service
+- Azure Machine Learning Studio(classic)
+  - An older service that manages AI/ML workloads. Does not have a pipeline and other limitations. Workloads are not easily transferable from classic to the new service.
+- Azure Machine Learning Service
+  - A service that simplifies running AI/ML related workloads allowing you to build flexible Automated ML Pipelines. Use Python or R, Run DL workloads such as Tensorflow.
+  - Jupyter Notebooks
+    - Build and document your machine learning models as you build them, share and collaborate.
+  - Azure Machine Learning SDK for Python
+    - An SDK designed specifically to interact with Azure Machine Learning Services
+  - MLOps
+    - end to end automation of ML model pipelines. eg. CI/CD, Training, inference.
+  - Azure Machine Learning Designer
+    - Drag and drop interface to visually build, test, and deploy machine learning models.
+  - Data Labeling Service
+    - ensemble(组件) a team of humans to label your training data.
+  - Responsible Machine Learning
+    - model fairness through disparity metrics and mitigate unfairness.(通过差异指标建立公平模型并减轻不公平现象)
+
+### Azure Machine Learning Studio
+- Author
+  - Notebooks
+    - Jupyter Notebooks, an IDE to write python code to build ML models
+  - AutoML
+    - Completely automated process to build and train a ML model.
+  - Designer
+    - Visual drag and drop designer to construct end to end ML pipelines
+- Assets
+  - Dataset
+    - data that you upload which will be used for training
+  - Experiments(实验)
+    - When you run a training job they are detailed here
+  - Pipeline
+    - ML workflows you have built, or you have used in the Designer.
+  - Models
+    - a model registry(注册表) containing trained models that can be deployed
+  - Endpoints
+    - When you deploy a model its hosted on an accessible endpoint. eg. REST API.
+- Manage
+  - Compute
+    - The underlying(底层的) computing instances used for notebooks, training, inference.
+  - Environments
+    - A reproducible(可重现的) Python environment for machine learning experiments.
+  - Datastores
+    - A data repository where your dataset resides
+  - Data Labeling
+    - Have humans with ML-assisted labeling label your data for supervised learning.
+  - Linked Services
+    - External services you can connect to the workspace. eg. Azure Synapse Analytics.
+
+### Azure Machine Learning Studio - Compute
+- Compute Instance
+  - Development workstations that data scientists can use to work with data and models
+- Compute Clusters
+  - Scalable clusters of virtual machines for on-demand processing of experiment code
+- Inference Clusters
+  - Deployment targets for predictive services that use your trained models.
+- Attached Compute
+  - Links to existing Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
+
+### Azure Machine Learning Studio - Data Labeling
