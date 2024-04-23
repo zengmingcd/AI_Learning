@@ -851,3 +851,139 @@
   - Links to existing Azure compute resources, such as Virtual Machines or Azure Databricks clusters.
 
 ### Azure Machine Learning Studio - Data Labeling
+- Create Data labeling jobs to prepare your Ground Truth for supervised learning.
+- Human-in-the-loop labeling
+  - You have a team of humans that will apply labeling
+  - These are humans you grant(授予) access to labeling
+- Machine-learning-assisted data labeling
+  - You will use ML to perform labeling
+- You can export the label data for Machine Learning experimentation at any time.
+- Users often export multiple times and train different models, rather than wait for all the images to be labeled.
+- Image labels can be exported in:
+  - COCO format
+  - Azure Machine Learning dataset
+    - dataset format makes it easy to user for training in Azure Machine Learning.
+
+### Azure Machine Learning Studio - Data Stores
+- Datastores securely connect to your storage service on Azure without putting your authentication credentials and the integrity(完整性) of your original data source at risk.
+- Azure Blob Storage
+  - data is stored as objects, distributed across many machines.
+- Azure File Share
+  - A mountable file share via SMB and NFS protocols.
+- Azure Data Lake Storage(Gen 2)
+  - Azure Blob storage designed for vasts amount of data for Big Data analytics.
+- Azure SQL database
+  - Full-managed MS SQL relational database
+- Azure Postgres database
+  - open-source relation database
+- Azure MySQL database
+  - Open-source relation database.
+
+### Azure Machine Learning Studio - Datasets
+- Azure ML Datasets makes it easy to register your datasets for use with your ML workloads.
+  - There will be various metadata associated with your dataset
+  - You can upload new datasets and they will be versioned(版本化)
+  - Azure provides the same code snippet with the Azure Machine Learning SDK for Python to start programmatically using datasets in your Jupyter Notebooks.
+- Generate Profile
+  - You can create a data profile that has summary statistic, distribution of the data, and more. 
+  - You will need to launch a compute instance to generate a profile.
+- Open Datasets are publicly hosted datasets that are commonly used for learning how to build ML models
+  - Azure has a curated list of open-datasets that you can quickly add your data store.
+  - Great for learning how to use AutoML or Azure Machine Learning Designer.
+  
+### Azure Machine Learning Studio - Experiments
+- Experiments is a logical grouping Azure Runs
+- Runs are the act of running an ML task on a virtual machine or container.
+- Experiments do not include Inference(推理).
+- The contents of a run will vary based on its Run Type.
+
+### Azure Machine Learning Studio - Piplines
+- Azure ML Pipeline is an executable workflow of a complete machine learning risk
+- Subtasks are encapsulated(封装的) as a series of steps within the pipeline.
+- Independent steps allow multiple data scientists to work on the same pipeline at the same time without over-taxing(过度计费) compute resources.
+- Separate steps also make it easy to use different compute types/sizes for each step.
+- When you rerun a pipeline, the run jumps to the steps that need to be rerun, such as an updated training script.
+- Steps that do not need to be rerun are skipped.
+- After a pipeline has been published, you can configure a REST endpoint, which allows you to rerun the pipeline from any platform or stack.
+- You can build pipelines two ways:
+  - Using the Azure Machine Learning Designer
+  - Programmatically using the Azure Machine Learning Python SDK.
+
+### Azure Machine Learning Studio - ML Designer
+- The Azure Machine Learning Designer lets you quickly build Azure ML Pipelines without having to write code.
+- You can drag out various templated steps called assets to quickly prototype your pipeline.
+- Once a pipeline is trained you can create an inference pipeline.
+- You can toggle between your training in the inference pipeline
+
+### Azure Machine Learning Studio - Models
+- Model Registry allows you to create, manage and track your registered models as incremental(增加的) versions under the same name.
+- Each time you register a model with the same name as an existing one, the registry assure that it's a new version.
+- Additionally, you can provide metadata tags and use the tags when you search for models.
+
+### Azure Machine Learning Studio - Endpoints
+- Azure ML Endpoints allow you to deploy machine learning models as a web service.
+- The workflow for deploying a model:
+  - Register the model
+  - Prepare an entry script
+  - Prepare an inference configuration
+  - Deploy the model locally to ensure everything works
+  - Choose a compute target
+  - Re-deploy the model to the cloud
+  - Test the resulting web service
+- Realtime endpoints
+  - An endpoint that provides remote access to invoke the ML model service running on either:
+    - Azure Kubernetes Service (AKS)
+    - Azure Container Instance (ACI)
+- Pipeline endpoints
+  - An endpoint that provides remote access to invoke a ML pipeline.
+  - You can parameterize the pipeline endpoint for managed repeatability in batch scoring and retraining scenarios.
+  - When you deploy a model to an endpoint it will either be deployed to:
+    - Azure Kubernetes Service (AKS)
+    - Azure Container Instance (ACI)
+- When you have deployed a real-time endpoint you can test the endpoint by sending a single request or a batch request.
+- The computing resource will not show in Azure Machine Learning Studio, you need to check AKS or ACI
+
+### Azure Machine Learning Studio - Notebooks
+- Azure has a built-in Jupyter-like Notebook editor so you can build and train your ML models
+- Choose Compute
+  - You need to crate a compute instance to run your Notebook
+- Choose Kernel
+  - You need to choose a Kernel that preloads a programming language and programming libraries for different use cases
+- You can open the Notebook in a more familiar IDE:
+  - VSCode
+  - Jupyter Notebook(classic)
+  - Jupyter Lab
+
+### AutoML
+- Automated machine learning (AutoML) automates the process of creating an ML model.
+- With Azure AutoML you 
+  - supply a dataset
+  - Choose a Task Type (Classification, Regression, or Time Series Forecasting)
+  - Then AutoML will train and tune your model
+- 3 Task Type
+  - Classification
+    - When you need to make a prediction based on several classes:
+      - Binary classification: Yes or No.
+      - Multi-class classification: Red, Green, Blue
+    - Classification is a type of supervised learning in which models learn using training data, and apply those learning to new data.
+    - The goal of classification models is to predict which categories new data will fall into based on learnings from its training data:
+      - binary classification: a record is labeled out of two possible labels. E.g: true or false.
+      - multiclass classification: a record is labeled out of a range of labels: happy, sad, mad, rad.
+  - Regression
+    - When you need to predict a continuous number value
+    - Regression is a type of supervised learning in which models learn using training data, and apply those learnings to new data.
+    - The goal of regression is to predict a variable in the future.
+  - Time Series Forecasting
+    - When you need to predict the value based on time
+    - Forecast revenue, inventory, sales, or customer demand
+    - An automated time-series experiment is treated as a multivariate(多变量) regression problem.
+    - Past time-series values are "pivoted" to become additional dimensions for the regressor together with other predictors
+    - Unlike classical time series methods, has an advantage of naturally incorporating multiple contextual variables and their relationship to one another during training(与经典时间序列方法不同，它的优点是在训练期间自然地合并多个上下文变量及其相互关系)
+    - Advanced forecasting configuration includes:
+      - holiday detection and featurization
+      - time-series and DNN learners (Auto-ARIMA, Prophet, ForecastTCN)
+      - many models support through grouping
+      - rolling-origin cross validation
+      - configurable lags
+      - rolling window aggregate features
+
