@@ -987,3 +987,61 @@
       - configurable lags
       - rolling window aggregate features
 
+### AutoML - Data Guard Rails (数据护栏)
+- Data guardrails are run by Azure AutoML when automatic featurization is enabled. 
+- A sequence of checks to ensure high-quality input data is being used to train the model.
+
+### AutoML - Automatic Featurization
+- During model training with AutoML, one of the following scaling(缩放) or normalization techniques will be applied to each model.
+  - StandardScaleWrapper - Standardize features by removing the mean(均值) and scaling to unit variance(单位方差).
+  - MinMaxScalar - Transforms features by scaling each feature by that column's minimum and maximum.
+  - MaxAbsScaler - Scale each feature by its maximum absolute value.
+  - RobustScalar - Scales features by their quantile range.
+  - Principal component analysis (PCA) - Linear dimensionality reduction using Singular Value Decomposition of the data to project it to a lower-dimensional space.
+  - TruncatedSVDWrapper - This transformer performs linear dimensionality reduction by means of truncated singular value decomposition (SVD)
+    - Contrary to PCA, this estimator does not center the data before computing the singular value decomposition, which means it can work with scipy.sparse matrices efficiently
+  - SparseNormalizer - Each sample (that is, each row of the data matrix) with at least one non-zero component is rescaled independently of other samples so that its norm (l1 or l2) equals one.
+
+### AutoML - Model Selection
+- Model selection is the task of selecting a statistical model from a set of candidate models.
+- Azure AutoML will use many different ML Algorithms and will recommend the best performing candidate.
+
+### AutoML - Explanation
+- ML Explainability (MLX) is the process of explaining and interpreting ML and deep learning models.
+- MLX can help machine learning developers to better understand and interpret the model's behavior.
+- After your top candidate model is selected by Azure AutoML you can get an explanation of the internals on various factors:
+  - Model Performance
+  - Dataset explorer
+  - Aggerate feature importance
+  - Individual feature importance
+
+### AutoML - Primary Metrics
+- The primary metric parameter determines the metric to be used during model training for optimization.
+- Classification
+  - Suited for large datasets that well-balanced
+    - Accuracy - Image classification, Sentiment analysis, Churn prediction.
+    - Average_precision_score_weighted - Sentiment analysis
+    - Norm_macro_recall - Churn prediction
+    - Precision_score_weighted
+  - Suited for small dataset that are imbalanced
+    - AUC_weighted  - Fraud detection, Image classification, Anomaly detection/spam detection
+- Regression
+  - Works well when the value to predict encompasses a large range eg. 10K to 200K
+    - Spearman_correlation
+    - r2_score - Airline delay, Salary estimation, Bug resolution time.
+  - Works well when value to predict encompasses as smaller range eg. 10-20k
+    - Normalized_root_mean_squared_error - Price prediction (house/product/tip), Review score prediction.
+    - Normalized_mean_absolute_error
+- Time Series
+  - Works well when value to predict encompasses as large range eg. 10K to 200K 
+    - Spearman_correlation
+    - r2_score - Price prediction(forecasting), Inventory optimization, demand forecasting.
+  - Works well when value to predict encompasses as smaller range eg. 10-20k
+    - Normalized_root_mean_squared_error - Price prediction (forecasting), Inventory optimization, demand forecasting.
+    - Normalized_mean_absolute_error
+
+### AutoML - Validation Type
+- Model Validation is when we compare the results of our training dataset to our test dataset.
+- Model Validation occurs after we train the model
+- With AutoML you can change the validation type.
+
