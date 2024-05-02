@@ -1045,3 +1045,86 @@
 - Model Validation occurs after we train the model
 - With AutoML you can change the validation type.
 
+### Custom Vision
+- Custom Vision is a fully managed no-code service to quickly build your own classification and object detection ML models.
+- This service is hosted on its own isolate domain at www.customvision.ai
+- Upload Images
+  - Bring your own labeled images, or use Custom Vision to quickly add tags to any unlabeled images.
+- Train
+  - Use your labeled images to teach Custom Vision the concepts you care about.
+- Evaluate
+  - Use simple REST API calls to quickly tag images with your new custom computer vision model.
+
+### Custom Vision - Project Types
+- Within Custom Vision you set up projects and you need to select a Project Type
+- Classification
+  - Multi-label
+    - When we want to apply many tags to an image
+      - Image contains both a cat and a dog.
+  - Multi-class
+    - When we only have one possible tag to an image:
+      - It is either an Apple, Banana, Orange
+- Object Detection
+  - When we detect various objects in an image
+- Domain
+  - A Domain is a Microsoft managed dataset that is used for training the ML model. There are different domains that suited for different use cases.
+- Classification Domains
+  - General
+    - Optimized for a broad range of image classification tasks. If none of the other specific domains are appropriate, or if you're unsure of which domain to choose, select one of the General domains.
+  - General [A1]
+    - Optimized for better accuracy with comparable inference time as General domain.
+    - Recommended for larger datasets or more difficult user scenarios. This domain requires more training time.
+  - General [A2]
+    - Optimized for better accuracy with faster inference time than General [A1] and General domains.
+    - Recommended for most datasets. This domain requires less training time than the General and General [A1] domains.
+  - Food
+    - Optimized for photographs of dishes as you would see them on a restaurant menu. If you want to classify photographs of individual fruits or vegetables, use the Food domain.
+  - Landmarks
+    - Optimized for recognizable landmarks, both natural and artificial. This domain works best when the landmark is clearly visible in th photograph. This domain works even if the landmark is slightly obstructed by people in front of it.
+  - Retail
+    - Optimized for images that are found in a shopping catalog or shopping website. If you want high-precision classifying between dress, pants, and shirts, use this domain.
+  - Compact domains
+    - Optimized for the constraints of real-time classification on edge devices.
+- Object Detection Domains
+  - General
+    - Optimized for a broad range of object detection tasks. If none of the other domains are appropriate, or you are unsure of which domain to choose, select the General domain.
+  - General [A1]
+    - Optimized for better accuracy with comparable inference time as General domain.
+    - Recommended for more accurate region location needs, larger datasets, or more difficult user scenarios. This domain requires more training time, and results are not deterministic: expect a +-1% mean Average Precision (mAP) difference with the same training data provided.
+  - Logo
+    - Optimized for finding brand logos in images.
+  - Products on shelves
+    - Optimized for detecting and classifying products on shelves.
+
+### Custom Vision - Image Classification
+- For Image Classification, you upload multiple images and apply single or multiple labels to the entire image.
+
+### Custom Vision - Object Detection
+- For Object Detection, you apply tags to objects in an image for data labeling
+- When you hover your cursor over the image Custom Vision uses ML to show bounding boxes of possible objects but yet have no label applied.
+- You have to have at least 15 images for every tag to train.
+
+### Custom Vision - Training
+- When you are ready to train your model you have two options:
+  - Quick Training - trains quickly but can be less accurate.
+  - Advanced Training - increase the compute time to improve your results.
+- With each iteration of training our ML model will improve the evaluation metrics (precision and recall)
+- The probability threshold value determines when to stop training when our evaluation metrics meet our desired threshold.
+- Once the Classification training job is complete we will get a report of the evaluation metrics outcome.
+  - Precision (精确)
+    - Being exact and accurate
+    - Select items that are relevant.
+  - Recall (Sensitivity or True Positive Rate)
+    - How many relevant items returned
+  - Average Precision (AP)
+- Once the Object Detection training job is complete we will get a report of the evaluation metrics outcome.
+  - Precision
+  - Recall
+  - Mean Average Precision (mAP)
+- Before deploying our final trained model that can be invoked via an API Endpoint
+- It is good practice to test our ML model using the Quick Test feature.
+- To Deploy our ML model to be accessible using our API Key and Endpoint we need to trigger the Publish action.
+- Once published we can get the Prediction URL
+- When you have a vary large dateset you can use Smart Labeler to predict labels.
+- Smart Labeler only works if you have trained the label.
+- Smart labeler is when you want to increase your training set, and want ML-Assisted labeling to speed up this process.
