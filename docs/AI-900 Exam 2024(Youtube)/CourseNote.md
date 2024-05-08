@@ -1128,3 +1128,98 @@
 - When you have a vary large dateset you can use Smart Labeler to predict labels.
 - Smart Labeler only works if you have trained the label.
 - Smart labeler is when you want to increase your training set, and want ML-Assisted labeling to speed up this process.
+
+### AI V.S Generative AI
+- AI 
+  - AI refers to the development of computer systems that can perform tasks typically requiring human intelligence. These include problem-solving, decision-making, understanding natural language, recognizing speech and images, and more.
+  - The primary goal of traditional AI is to create systems that can interpret, analyze and respond to human actions or environmental changes efficiently and accurately. It aims to replicate or simulate human intelligence in machines.
+  - AI applications are vast and include areas like expert systems, natural language processing, speech recognition and robotics.
+  - AI is used in various industries for tasks such as customer service chatbots, recommendation system in e-commerce, autonomous vehicles, and medical diagnosis.
+- Generative AI
+  - Generative AI is a subset of AI that focuses on creating new content or data that is novel and realistic. It does not just interpret or analyze data but generates new data itself. It includes generating text, images, music, speech and other forms of media.
+  - It often involves advanced machine learning techniques, particularly deep learning models like Generative Networks (GANs), Variational Autoencoders(VAEs), and Transformer models (like GPT).
+  - Generative AI is used in a range of applications including creating realistic images and videos, generating human-like text, composing music, creating virtual environments, and even drug discovery.
+  - Examples: 
+    - Tools like GPT (Generative Pre-trained Transformer) for text generation. 
+    - DALL-E for image creation, and various deep learning models that compose music.
+  
+| Feature | AI | Generative AI |
+|---------|----|---------------|
+| Functionality | Regular AI focuses on understanding and decision-making | Generative AI is about creating new, original outputs.|
+| Data Handing  | AI typically analyzes and makes decisions based on existing data   | Generative AI uses existing data to generate new, unseen outputs. |
+| Applications  | Its applications span across various sectors, including data analysis, automation, natural language processing, and healthcare.     | Its applications are more creative and innovative, focusing on content creation, synthetic data generation, deepfakes, and design.     |
+
+### What is a Large Language Model (LLM)
+- A Large Language Model (LLM) such as GPT (Generative Pre-trained Transformer) works in a way that's similar to a complex, automatic system that recognizes patterns and makes predictions.
+  - Training on Large Datasets: Initially, the models is trained on massive amounts of text data. This data can include books, articles, websites, and other written material.
+    - During this training phase, the model learns patterns in language, such as grammar, word usage, sentence structure, and even style and tone.
+  - Understanding Context: The model's design allows it to consider a wide context. This means it doesn't just focus on single words, but understands them in relation to the words and sentences that come before and after. This context understanding is important for generating coherent and relevant text.
+  - Predicting the next Word: When you give the model a prompt ( a starting piece of text), it uses what it has learned to predict the next most likely word.
+    - It then adds this word to the prompt and repeats the process, continually predicting the next word based on the extended sequence.
+  - Generating Text: This process of predicting the next word continues, creating a chain of words that forms a coherent piece of text. The length of this generated text can vary based on specific instructions or limitations set for the model.
+  - Refinement with Feedback: The model can be further refined and improved over time with feedback. This means it gets better at understanding and generating text as it is exposed to more data and usage.
+
+### Transformer models
+- A transformer model is a type of machine learning model that's especially good at understanding and generating language.
+- It's built using a structure called the transformer architecture, which is really effective for tasks involving natural language processing (NLP), like translating languages or writing text.
+- Transformer model architecture consists of two components, or blocks:
+  - Encoder: This part reads and understands the input text. It's like a smart system that goes through everything it's been taught (which is a lot of text) and picks up on the meanings of words and how they're used in different contexts.
+  - Decoder: Based on what the encoder has learned, this part generates new pieces of text. It's like a skilled writer that can make up sentences that flow well and make sense.
+- There are different types of transformer models with specific jobs.
+
+### Tokenization
+- Tokenization in a transformer model is like turning a sentence into a puzzle. To help a computer understand the sentence, we chop up the sentence into pieces called "tokens". Each piece can be a word or even a part of word.
+- After tokenization, the sentence becomes a series of numbers, like giving each word a special code. The computer uses these codes to learn about the words and how they fit together.
+- If a word repeats, we use its code again instead of making a new one.
+  - As the computer reads more text, it keeps turning new words into new tokens with new numbers.
+
+### Embeddings
+- To help a computer understand language, we turn words into tokens and then give each token a special numeric code, called an embedding. These embeddings are like a secret code that captures the meaning of the word.
+- Suppose the embeddings for our tokens consist of vectors.
+- Words that have similar meanings or are used in similar ways get codes that look alike.
+- This way, the computer can figure out which words are similar to each other just by looking at their codes. It's like giving each word a home on a map, and words that are neighbors on this map have relate meanings.
+
+### Positional encoding
+- Positional encoding is a technique used to ensure that a language model, such as GPT doesn't lose the order of words when processing natural language. This is important because the order in which words appear can change the meaning of sentence.
+- Without positional encoding, if we simply tokenize this sentence and convert the tokens into embedding vectors, we might end up with a set of vectors that lose the sequence information.
+- Positional encoding adds a positional vector to each word to keep track of the positions of the words.
+- However, by adding positional encoding vectors to each word's embedding, we ensure that each position in the sentence is uniquely identified.
+- As a result, the sentence is represented not just by a sequence of vectors for its words, but by a sequence of vectors that are influenced by the position of each word in the sentence.
+- This means that even if another sentence had the same words in a different order, its overall representation would be different because the positional encodings would differ, reflecting the different sequence of words.
+
+### Attention
+- Attention in AI, especially in transformer models, is a way the model figures out how important each word(or token) is to the meaning of a sentence, particularly in relation to the other words around it.
+  - Self_Attention: Imagine each word in the sentence shining a flashlight on the other words. The brightness of the light shows how much one word should pay attention to the others when understanding the sentence.
+  - Encoder's Role: In the encoder part of a transformer model, attention helps decide how to represent each word as a number (or vector). It's not just the word itself, but also its context that matters.
+  - Decoder's Role: When generating new text, like completing a sentence, the decoder users attention to figure out which words it already has are most important for deciding what comes next.
+  - Multi-Head Attention: It's like having multiple flashlights, each highlighting different aspects of the words. Maybe one flashlight looks at the meaning of the word, another looks at its role in the sentence (like subject or object), and so on. This helps the model get a richer understanding of the text..
+  - Building the Output: The decoder builds the sentence one word at a time, using attention at each step. It looks at the sentence so far, decides what's important, and then predicts the next word. It's an ongoing process, with each new word influencing the next.
+- Attention in transformer models is like a guide that helps the AI understand and create language by focusing one the most relevant parts of the text, considering both individual word meanings and their relationship within the sentence.
+- Processing example
+  - Token Embeddings: Each word in the sentence is represented as a vector of numbers
+  - Predicting the Next Token: The goal is to figure out what the next word (token) should be, also represented as a vector.
+  - Assigning Weights: The attention layer looks at the sentence so far and decides how much influence(weight) each word should have on the next one.
+  - Calculating Attention Scores: Using these weights, a new vector for the next token is calculated, which includes an attention score. Multi-head attention does this several times, focusing on different aspects of the words.
+  - Choosing the Most Likely Word: A neural network takes these vectors with attention scores and picks the word from the vocabulary that most likely comes next.
+  - Adding to the Sequence: The chosen word is added to the existing sequence, and the process repeats for each new word.
+- GPT-4 as an example
+  - A transformer model like GPT-4 works by taking a text input(prompt) and producing a well-structured output(completion). During training, it learns from a vast array of text data, understanding how words are typically arranged in sentences.
+  - The model knows the correct sequence of words but hides (masks) future words to learn how to predict them. When it tries to predict a word, it compares its guess to the actual word, gradually adjusting to reduce errors.
+  - In practice, the model uses its training to assign importance(weights) to each word in a sequence, helping it guess the next word accurately. The result is that GPT-4 can create sentences that should like they were written by a human.
+  - However, this doesn't mean the model "know" things or is "intelligent" in the human sense. It's simply very good at using its large vocabulary and training to generate realistic text based on word relationships.
+
+### Azure Open AI Service
+- Azure OpenAI Service is a cloud-base platform designed to deploy and manage advanced language models from OpenAI. This service combines OpenAI's latest language model developments with the robust security and scalability of Azure's cloud infrastructure.
+- Azure OpenAI offers several types of models for different purpose:
+  - GPT-4 Models: There are the newest in the line of GPT models and can create text and programming code when given a prompt written in natural language.
+  - GPT-3.5 Models: Similar to GPT-4, these models also create text and code from natural language prompt. The GPT-3.5-turbo version is specially designed for conversations, making it a great choice for chat applications and other interactive AI tasks.
+  - Embedding Models: These models turn written text into number sequences, which is helpful for analyzing and comparing different pieces of text to find out similar they are.
+  - DALL-E Models: These models can make images from descriptions given in words. The DALL-E models are still tested and aren't shown in the Azure OpenAI Studio. so you don't have to set them up for use manually.
+- Key concepts in using Azure OpenAI include prompts and completions, tokens, resources, deployments, prompt engineering, and various models:
+  - Prompt & completions: Users interact with the API by providing a text command in English, known as a prompt, and the model generates a text response, or completion.
+  - Tokens: Azure OpenAI breaks down text into tokens, which are words or character chunks, to process requests. The number of token affects response latency and throughput.
+  - Resources: Azure OpenAI operates like other Azure products where users create a resource within their Azure Subscription.
+  - Deployments: To use the service, users must deploy a model via Deployment APIs, choosing the specific model for their needs.
+  - Prompt Engineering: Crafting prompts is crucial as they guide the model's output. This requires skill, as prompt construction is nuanced and impacts the model's response.
+  - Models: Various models offer different capabilities and pricing. DALL-E creates images from text, while Whisper transcribes and translates speech to text. Each has unique features suitable for different tasks.
+  - 
